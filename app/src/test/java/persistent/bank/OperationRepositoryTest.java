@@ -11,6 +11,6 @@ public class OperationRepositoryTest {
         OperationRepository repository = new OperationRepository();
         Operation persistentOperation = repository.save(new Operation());
         Assertions.assertNull(persistentOperation.getId());
-
+        HibernateUtil.shutdown();
     }
 }

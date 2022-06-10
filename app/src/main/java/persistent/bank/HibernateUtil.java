@@ -36,6 +36,7 @@ public class HibernateUtil {
 
 				configuration.setProperties(properties);
 				configuration.addAnnotatedClass(User.class);
+				configuration.addAnnotatedClass(Operation.class);
 
 				ServiceRegistry standardRegistry = new StandardServiceRegistryBuilder()
 					.applySettings(configuration.getProperties())
@@ -46,7 +47,7 @@ public class HibernateUtil {
 			return sessionFactory;
 		} catch (Throwable ex) {
 			throw new ExceptionInInitializerError(ex);
-		}
+		} 
 	}
 
 	public static SessionFactory getSessionFactory() {
