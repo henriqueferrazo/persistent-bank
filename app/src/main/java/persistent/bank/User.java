@@ -14,13 +14,6 @@ public class User {
     private String email;
     private String phone;
 
-    public int getId() {
-        return id;
-    }
-    public void setId(int id) {
-        this.id = id;
-    }
-
 
     public String getName() {
         return name;
@@ -41,6 +34,10 @@ public class User {
     }
     public void setPhone(String phone) {
         this.phone = phone;
+    }
+
+    public Object getId() {
+        return null;
     }
 
 
