@@ -11,12 +11,21 @@ public class Operation {
     @GeneratedValue
     private int id;
 
-    private double type;
-    private double date;
+    private String type;
+    private long date;
+    private String value;
 
     @Transient
     private User user;
 
+    public String getValue() {
+        return value;
+    }
+
+    public void setValue(String value) {
+        this.value = value;
+    }
+    
     public User getUser() {
         return user;
     }
@@ -25,11 +34,11 @@ public class Operation {
         this.user = user;
     }
 
-    public double getType() {
+    public String getType() {
         return type;
     }
 
-    public void setType(double type) {
+    public void setType(String type) {
         this.type = type;
     }
 
@@ -37,7 +46,7 @@ public class Operation {
         return date;
     }
 
-    public void setDate(double date) {
+    public void setDate(long date) {
         this.date = date;
     }
 
